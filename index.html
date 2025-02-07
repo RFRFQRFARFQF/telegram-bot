@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Web App</title>
+    <title>Telegram TON Wallet</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
         body {
@@ -22,13 +22,13 @@
             padding: 10px 20px;
             font-size: 18px;
             color: white;
-            background-color: #007BFF;
+            background-color: #0088cc;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #005f99;
         }
     </style>
 </head>
@@ -36,12 +36,18 @@
 
     <img src="photo.jpg" alt="Фото">
     <br>
-    <button onclick="buttonClick()">Нажми меня</button>
+    <button onclick="connectWallet()">Подключить TON Кошелёк</button>
 
     <script>
-        function buttonClick() {
-            alert("Кнопка нажата!");
+        function connectWallet() {
+            let tg = window.Telegram.WebApp;
+            tg.openTelegramLink("https://t.me/wallet");
         }
+    </script>
+
+</body>
+</html>
+
     </script>
 
 </body>
